@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    /*  */
+    --app-background-stripe: #009688;
+    --white-boolzapp: #FFFFFF;
+    --border-panel: #e0e0e0;
+    --panel-background: #ededed;
+    --icon: #919191;
+    --secondary: rgba(0, 0, 0, 0.6);
+    --butterbar-background-default: #9de1fe;
+    --icon-lighter: rgba(0, 0, 0, 0.3);
+     --shadow-rgb: 0,0,0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--white-boolzapp);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    min-width: 800px;
+    min-height: 600px;
+}
+
+img {
+    display: block;
+}
+
+.container {
+    background: rgb(211,219,219);
+    background: -webkit-linear-gradient(bottom, rgba(211,219,219,1) 0%, rgba(220,219,209,1) 100%);
+    background: -o-linear-gradient(bottom, rgba(211,219,219,1) 0%, rgba(220,219,209,1) 100%);
+    background: linear-gradient(to top, rgba(211,219,219,1) 0%, rgba(220,219,209,1) 100%);
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-stripe {
+    background-color: var(--app-background-stripe);
+    height: 127px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+}
+
+.app-wrapper-web {
+    height: calc(100% - 38px);
+    top: 19px;
+    margin: auto;
+    width: 1200px;
+    box-shadow: 0 1px 1px 0 rgba(var(--shadow-rgb),.06),0 2px 5px 0 rgba(var(--shadow-rgb),.2);
+    background-color: white;
+    position: absolute;
+    display: flex;
+}
+
+.left-side {
+    flex: 30%;
+}
+
+.head-left,
+.head-right {
+    height: 59px;
+    width: 100%;
+    background-color: var(--panel-background);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.head-right {
+    border-left: 1px solid var(--border-panel);
+}
+
+.right-side {
+    flex: 70%;
+    overflow: auto;
+}
+
+.avatar {
+    padding: 0 15px;
+}
+
+.avatar img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--icon-lighter);
+}
+.nav-head-left,
+.nav-head-right {
+    padding: 0 10px;
+}
+.nav-head-left i,
+.nav-head-right i {
+    padding: 0 10px;
+    color: var(--icon);
+    font-size: 20px;
+}
+
+.profile {
+    display: flex;
+}
+
+.avatar-text {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+.avatar-text h5,
+.notifications h5,
+.chat-item-text h5 {
+    font-size: 14px;
+}
+
+.avatar-text p,
+.notifications p,
+.chat-item-text p,
+.time p  {
+    font-size: 12px;
+    color: var(--secondary);
+}
+
+.notifications p {
+    text-decoration: underline;
+}
+
+.notifications {
+    height: 62px;
+    width: 100%;
+    background-color: var(--butterbar-background-default);
+    display: flex;
+    align-items: center;
+}
+
+.bell-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--white-boolzapp);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.bell-icon i {
+    color: var(--butterbar-background-default);
+}
+
+.search {
+    height: 49px;
+    width: 100%;
+    background-color: var(--panel-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input {
+    background-color: var(--white-boolzapp);
+    border-radius: 18px;
+    width: 90%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.search-input i {
+    color: var(--icon-lighter);
+}
+
+#search {
+    border: none;
+    margin-left: 15px;
+    width: 250px;
+    color: var(--icon-lighter);
+}
+
+.chat-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.chat-item {
+    display: flex;
+    width: 100%;
+    height: 72px;
+    border-bottom: 1px solid var(--border-panel);
+    align-items: center;
+}
+
+.chat-item-text {
+    width: 200px;
+}
+.time {
+    padding: 0 10px;
+    margin-left: 30px;
+}
+
+.sub-container {
+    overflow: auto;
+}
+
+.chat {
+    background-image: url(../img/wallpaper.png);
+    background-size: 50%;
+    width: 100%;
+    height: 100%;
+}
