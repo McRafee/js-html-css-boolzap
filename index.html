@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>BoolzaApp</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"/>
-        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
-        <link rel="icon" href="favicon.ico" /> <!-- Favicon -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> <!-- Font -->
-        <link rel="stylesheet" href="css/style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="background-stripe"></div>
-            <div class="app-wrapper-web">
-                <div class="left-side">
+
+<head>
+    <meta charset="utf-8">
+    <title>BoolzaApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
+    <link rel="icon" href="favicon.ico" /> <!-- Favicon -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> <!-- Font -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="background-stripe"></div>
+        <div class="app-wrapper-web">
+            <div class="left-side">
+                <div class="sub-container">
                     <div class="head-left">
                         <div class="avatar">
                             <img src="img/profile-00.png" alt="Avatar 0">
@@ -42,140 +45,176 @@
                     <div class="search">
                         <div class="search-input">
                             <i class="fas fa-search"></i>
-                            <input id="search" type="text" name="" value="Cerca o inizia una nuova chat">
-                        </div>
-                    </div>
-                    <div class="sub-container">
-                        <div class="chat-list">
-                            <div class="chat-item">
-                                <div class="avatar">
-                                    <img src="img/profile-01.png" alt="Avatar 1">
-                                </div>
-                                <div class="chat-item-text">
-                                    <h5>
-                                        Giulia
-                                    </h5>
-                                    <p>
-                                        Ci vediamo stasera.
-                                    </p>
-                                </div>
-                                <div class="time">
-                                    <p>17:00</p>
-                                </div>
-                            </div>
-                            <div class="chat-item">
-                                <div class="avatar">
-                                    <img src="img/profile-02.png" alt="Avatar 1">
-                                </div>
-                                <div class="chat-item-text">
-                                    <h5>
-                                        Antonio
-                                    </h5>
-                                    <p>
-                                        Ci vediamo stasera.
-                                    </p>
-                                </div>
-                                <div class="time">
-                                    <p>17:00</p>
-                                </div>
-                            </div>
-                            <div class="chat-item">
-                                <div class="avatar">
-                                    <img src="img/profile-03.png" alt="Avatar 1">
-                                </div>
-                                <div class="chat-item-text">
-                                    <h5>
-                                        John
-                                    </h5>
-                                    <p>
-                                        Ci vediamo stasera.
-                                    </p>
-                                </div>
-                                <div class="time">
-                                    <p>17:00</p>
-                                </div>
-                            </div>
-                            <div class="chat-item">
-                                <div class="avatar">
-                                    <img src="img/profile-04.png" alt="Avatar 1">
-                                </div>
-                                <div class="chat-item-text">
-                                    <h5>
-                                        Bill
-                                    </h5>
-                                    <p>
-                                        Ci vediamo stasera.
-                                    </p>
-                                </div>
-                                <div class="time">
-                                    <p>17:00</p>
-                                </div>
-                            </div>
-                            <div class="chat-item">
-                                <div class="avatar">
-                                    <img src="img/profile-05.png" alt="Avatar 1">
-                                </div>
-                                <div class="chat-item-text">
-                                    <h5>
-                                        Gaetano
-                                    </h5>
-                                    <p>
-                                        Ci vediamo stasera.
-                                    </p>
-                                </div>
-                                <div class="time">
-                                    <p>17:00</p>
-                                </div>
-                            </div>
-                            <div class="chat-item">
-                                <div class="avatar">
-                                    <img src="img/profile-06.png" alt="Avatar 1">
-                                </div>
-                                <div class="chat-item-text">
-                                    <h5>
-                                        Steve
-                                    </h5>
-                                    <p>
-                                        Ci vediamo stasera.
-                                    </p>
-                                </div>
-                                <div class="time">
-                                    <p>17:00</p>
-                                </div>
-                            </div>
+                            <input id="search" type="text" name="" value="" placeholder="Cerca o inizia una nuova chat">
                         </div>
                     </div>
                 </div>
-                <div class="right-side">
-                    <div class="head-right">
-                        <div class="profile">
-                            <div class="avatar">
-                                <img src="img/profile-03.png" alt="Avatar 0">
-                            </div>
-                            <div class="avatar-text">
-                                <h5>
-                                    Samantha
-                                </h5>
-                                <p>
-                                    Ultimo accesso alle 17:00
-                                </p>
-                            </div>
+                <div class="chat-list">
+                    <div class="chat-item">
+                        <div class="avatar">
+                            <img src="img/profile-01.png" alt="Avatar 1">
                         </div>
-                        <div class="nav-head-right">
-                            <i class="fas fa-search"></i>
-                            <i class="fas fa-paperclip"></i>
-                            <i class="fas fa-ellipsis-v"></i>
+                        <div class="chat-item-text">
+                            <h5>
+                                Samantha
+                            </h5>
+                            <p>
+                                Ci vediamo stasera.
+                            </p>
                         </div>
-
+                        <div class="time">
+                            <p>17:00</p>
+                        </div>
                     </div>
-                    <div class="chat">
-
+                    <div class="chat-item">
+                        <div class="avatar">
+                            <img src="img/profile-02.png" alt="Avatar 1">
+                        </div>
+                        <div class="chat-item-text">
+                            <h5>
+                                Antonio
+                            </h5>
+                            <p>
+                                Ci vediamo stasera.
+                            </p>
+                        </div>
+                        <div class="time">
+                            <p>17:00</p>
+                        </div>
+                    </div>
+                    <div class="chat-item">
+                        <div class="avatar">
+                            <img src="img/profile-03.png" alt="Avatar 1">
+                        </div>
+                        <div class="chat-item-text">
+                            <h5>
+                                John
+                            </h5>
+                            <p>
+                                Ci vediamo stasera.
+                            </p>
+                        </div>
+                        <div class="time">
+                            <p>17:00</p>
+                        </div>
+                    </div>
+                    <div class="chat-item">
+                        <div class="avatar">
+                            <img src="img/profile-04.png" alt="Avatar 1">
+                        </div>
+                        <div class="chat-item-text">
+                            <h5>
+                                Bill
+                            </h5>
+                            <p>
+                                Ci vediamo stasera.
+                            </p>
+                        </div>
+                        <div class="time">
+                            <p>17:00</p>
+                        </div>
+                    </div>
+                    <div class="chat-item">
+                        <div class="avatar">
+                            <img src="img/profile-05.png" alt="Avatar 1">
+                        </div>
+                        <div class="chat-item-text">
+                            <h5>
+                                Gaetano
+                            </h5>
+                            <p>
+                                Ci vediamo stasera.
+                            </p>
+                        </div>
+                        <div class="time">
+                            <p>17:00</p>
+                        </div>
+                    </div>
+                    <div class="chat-item">
+                        <div class="avatar">
+                            <img src="img/profile-06.png" alt="Avatar 1">
+                        </div>
+                        <div class="chat-item-text">
+                            <h5>
+                                Steve
+                            </h5>
+                            <p>
+                                Ci vediamo stasera.
+                            </p>
+                        </div>
+                        <div class="time">
+                            <p>17:00</p>
+                        </div>
+                    </div>
+                    <div class="chat-item">
+                        <div class="avatar">
+                            <img src="img/profile-07.png" alt="Avatar 1">
+                        </div>
+                        <div class="chat-item-text">
+                            <h5>
+                                Walter
+                            </h5>
+                            <p>
+                                Ci vediamo stasera.
+                            </p>
+                        </div>
+                        <div class="time">
+                            <p>17:00</p>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="right-side">
+                <div class="head-right">
+                    <div class="profile">
+                        <div class="avatar">
+                            <img src="img/profile-03.png" alt="Avatar 0">
+                        </div>
+                        <div class="avatar-text">
+                            <h5>
+                                Samantha
+                            </h5>
+                            <p>
+                                Ultimo accesso alle 17:00
+                            </p>
+                        </div>
+                    </div>
+                    <div class="nav-head-right">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+
+                </div>
+                <div class="chat">
+                    <div class="chat-session">
+                        <div class="message-in">
+                            <p>Voulez-vous coucher avec moi, ce soir?</p>
+                            <div class="time-chat">
+                                <p>17:00</p>
+                            </div>
+                        </div>
+                        <div class="message-out">
+                            <p>Mi dispiace ma devo sistemare delle repo, sarà per la prossima volta.</p>
+                            <div class="time-chat">
+                                <p>17:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-input">
+                    <i class="far fa-smile"></i>
+                    <div class="chat-input">
+                        <input id="chat-input" type="text" name="" value="" placeholder="Scrivi un messaggio">
+                    </div>
+                    <i class="fas fa-microphone"></i>
+                </div>
+            </div>
         </div>
+    </div>
 
 
-        <script src="js/main.js" charset="utf-8"></script>
-    </body>
+    <script src="js/main.js" charset="utf-8"></script>
+</body>
+
 </html>
