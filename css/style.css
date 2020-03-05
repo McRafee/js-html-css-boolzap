@@ -97,7 +97,7 @@ img {
     flex: 70%;
     margin-top: 59px;
     margin-bottom: 62px;
-    overflow: auto;
+    /* overflow: auto; */
 }
 
 .avatar {
@@ -194,7 +194,7 @@ img {
 .chat-input {
     background-color: var(--white-boolzapp);
     border-radius: 18px;
-    width: 85%;
+    width: 80%;
     height: 35px;
     display: flex;
     align-items: center;
@@ -244,12 +244,15 @@ img {
     width: calc(1200px * 0.3);
 }
 
-.chat {
+.chat{
     background-image: url(../img/wallpaper.png);
-    background-size: 50%;
-    width: 100%;
+    background-repeat: repeat;
+    background-attachment: fixed;
     height: 100%;
+    background-size: 40%;
+    overflow: auto;
 }
+
 
 .bottom-input {
     height: 62px;
@@ -274,24 +277,24 @@ img {
 .chat-session {
     display: flex;
     flex-direction: column;
+
 }
 
 .chat-session .message-in {
     display: flex;
     flex-direction: column;
-    margin: 30px;
+    margin: 10px;
     padding: 10px;
     background-color: var(--white-boolzapp);
     border-radius: 10px;
     width: 40%;
     font-size: 16px;
-
 }
 
 .chat-session .message-out {
     display: flex;
     flex-direction: column;
-    margin: 30px;
+    margin: 10px;
     padding: 10px;
     align-self: flex-end;
     background-color: var(--chat-green);
@@ -306,4 +309,8 @@ img {
     align-self: flex-end;
     color: var(--secondary);
     font-size: 12px;
+}
+
+.chat-session-template {
+    display: none;
 }
