@@ -59,17 +59,22 @@ $(document).ready(function() {
 
     function sendMessage() {
         var messageInput = $('#chat-input').val();
-        $('#chat-input').val('');
-        var message = $('.chat-session-template .message-out').clone(); // Copy of the content of the message that is inside the template (display none in our CSS)
-        message.children('.message-out p').text(messageInput); // Edit the message text in the message
-        message.children('.message-out .time-chat').text(timeLocal());
-        $('.chat-session').append(message); // Added the message to the bottom of the list
+        if ($('#chat-input').length !== 0){
+            $('#chat-input').val('');
+            var message = $('.chat-session-template .message-out').clone(); // Copy of the content of the message that is inside the template (display none in our CSS)
+            message.children('.message-out p').text(messageInput); // Edit the message text in the message
+            message.children('.message-out .time-chat').text(timeLocal());
+            $('.chat-session').append(message); // Added the message to the bottom of the list
+        }
     }
 
     function timeLocal() {
         var date = new Date();
         var hours = date.getHours();
         var minutes = date.getMinutes();
+        if (minutes < 10){
+            minutes = ("0"+minutes);
+        }
         var time = hours + ":" + minutes;
         return time;
     }
