@@ -9,7 +9,7 @@ $(document).ready(function() {
     $('#chat-input').keypress(function() {
          if (event.code == "Enter") {
             sendMessage();
-            setTimeout(function(){ autoResponder("Oggi ho mal di testa!"); }, 1000);
+            setTimeout(function(){ autoResponder("ok"); }, 1000);
          }
     });
 
@@ -22,20 +22,28 @@ $(document).ready(function() {
         $("#send-message").attr("class","fas fa-microphone");
     });
 
-
-
     // filter friends in chat list
-    $('#cerca-contatti').keyup(function(event){
-        var carattereFiltro = $(this).val().toLowerCase();
-        // console.log(carattereFiltro);
-        $('#lista-contatti li').each(function(){ // Se nella lista contatti è presente il carattere digitato visualizzarlo
-            // console.log($(this).text());
-            if ($(this).text().toLowerCase().includes(carattereFiltro)) { // Se il nome del list item ha al suo interno i caratteri digitati visualizzalo
-                $(this).show();
-            } else { // Altrimenti non visualizzarlo
-                $(this).hide();
+    $('#search').keyup(function(event){
+        var searchFilter = $(this).val().toLowerCase();
+        $('.chat-item .chat-item-text h5').each(function(){ // If the typed character is present in the contact list, display it
+            if ($(this).text().toLowerCase().includes(searchFilter)) { // If the name of the list item has the characters typed inside, display it
+                $(this).parent().parent().show();
+            } else { // Otherwise, don't display it
+                $(this).parent().parent().hide();
+
             }
         });
+
+        $('.chat-item .chat-item-text p').each(function(){ // If the typed character is present in the contact list, display it
+            if ($(this).text().toLowerCase().includes(searchFilter)) { // If the name of the list item has the characters typed inside, display it
+                $(this).parent().parent().show();
+            } else { // Otherwise, don't display it
+                $(this).parent().parent().hide();
+
+            }
+        });
+
+
     });
 
 
