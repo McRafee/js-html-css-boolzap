@@ -228,6 +228,7 @@ img {
     height: 72px;
     border-bottom: 1px solid var(--border-panel);
     align-items: center;
+    cursor: pointer;
 }
 
 .chat-item-text {

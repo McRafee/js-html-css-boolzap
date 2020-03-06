@@ -42,6 +42,20 @@ $(document).ready(function() {
 
     });
 
+    // chat view at user click
+    $('.chat-item').click(function() {
+        // var userName = $(this).children().find("h5").text();
+        // console.log(userName); //debug
+        var userId = $(this).data('userId');
+        // console.log(userId); //debug
+        $('.chat-session').each(function(){
+            if(userId == $(this).data('userId')) {
+                $('.chat-session').removeClass("active");
+                $(this).toggleClass("active");
+
+            }
+        })
+     });
 
 
 
