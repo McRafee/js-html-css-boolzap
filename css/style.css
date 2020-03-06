@@ -314,3 +314,11 @@ img {
 .chat-session-template {
     display: none;
 }
+
+.chat-session {
+    display: none;
+}
+
+.active {
+    display: flex;
+}
