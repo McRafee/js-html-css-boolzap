@@ -44,18 +44,25 @@ $(document).ready(function() {
 
     // chat view at user click
     $('.chat-item').click(function() {
-        // var userName = $(this).children().find("h5").text();
+        var userName = $(this).children().find("h5").text();
+        var avatar = $(this).children().find("img").attr("src");
         // console.log(userName); //debug
+        //console.log(avatar); //debug
         var userId = $(this).data('userId');
         // console.log(userId); //debug
         $('.chat-session').each(function(){
             if(userId == $(this).data('userId')) {
                 $('.chat-session').removeClass("active");
-                $(this).toggleClass("active");
-
+                $(this).addClass("active");
+                $(".avatar-text h5").text(userName);
+                $(".profile .avatar img").attr("src",avatar);
             }
         })
      });
+
+     $(document).on('click', 'ul li' ,function() {
+     alert('li CLICK e ON');
+})
 
 
 
