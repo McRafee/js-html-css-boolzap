@@ -44,18 +44,21 @@ $(document).ready(function() {
 
     // chat view at user click
     $('.chat-item').click(function() {
+        var userBox = $(this);
         var userName = $(this).children().find("h5").text();
         var avatar = $(this).children().find("img").attr("src");
         // console.log(userName); //debug
-        //console.log(avatar); //debug
+        console.log(userBox); //debug
         var userId = $(this).data('userId');
         // console.log(userId); //debug
         $('.chat-session').each(function(){
             if(userId == $(this).data('userId')) {
+                $(".chat-item").removeClass("selected");
                 $('.chat-session').removeClass("active");
                 $(this).addClass("active");
                 $(".avatar-text h5").text(userName);
                 $(".profile .avatar img").attr("src",avatar);
+                $(userBox).addClass("selected");
             }
         })
      });

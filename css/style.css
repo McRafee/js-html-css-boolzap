@@ -265,6 +265,7 @@ img {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    cursor: pointer;
 }
 
 #chat-input{
@@ -322,4 +323,8 @@ img {
 
 .active {
     display: flex;
+}
+
+.selected {
+    background-color: rgba(0, 0, 0, 0.1);
 }
