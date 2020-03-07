@@ -78,7 +78,7 @@ $(document).ready(function() {
         var message = $('.chat-session-template .message-in').clone(); // Copy of the content of the message that is inside the template (display none in our CSS)
         message.children('.message-in p').text(messageInput); // Edit the message text in the message
         message.children('.message-in .time-chat').text(timeLocal());
-        $('.chat-session').append(message); // Added the message to the bottom of the list
+        $('.chat-session.active').append(message); // Added the message to the bottom of the list
         scroll(".chat");
     }
 
@@ -89,7 +89,7 @@ $(document).ready(function() {
             var message = $('.chat-session-template .message-out').clone(); // Copy of the content of the message that is inside the template (display none in our CSS)
             message.children('.message-out p').text(messageInput); // Edit the message text in the message
             message.children('.message-out .time-chat').text(timeLocal());
-            $('.chat-session').append(message); // Added the message to the bottom of the list
+            $('.chat-session.active').append(message); // Added the message to the bottom of the list
             scroll(".chat");
 
             setTimeout(function(){ autoResponder("ok"); }, 1000);
