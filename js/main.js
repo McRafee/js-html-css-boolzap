@@ -54,20 +54,23 @@ $(document).ready(function() {
      });
 
     // message menu
-    $(".chat-session .message-in").mouseenter(function() {
-        $(this).addClass('menu');
-        $(document).on('click', $(this) ,function() {
-            $(".message-menu").show();
-        });
-    });
+    // $(".chat-session .message-in").mouseenter(function() {
+    //     $(this).addClass('menu');
+    //     $(document).on('click', $(this),function() {
+    //         $(".message-menu").show();
+    //     });
+    // });
 
     $(".chat-session .message-out").mouseenter(function() {
         $(this).addClass('menu');
         var message = $(this);
         $(document).on('click', $(message) ,function() {
             // $(".message-menu").show();
+            var messageSelected = $(message).addClass("selected");
             var menu = $('.message-menu-template .message-menu').clone();
-            $(".message-menu li:last-child").click(function(){
+            $(messageSelected).append(menu);
+            $(messageSelected).find("message-menu").addClass("active");
+            $(".message-menu li:last-child").click(function(){ //delete function
             $(message).remove();
             })
         });

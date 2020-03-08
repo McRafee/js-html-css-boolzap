@@ -349,17 +349,18 @@ img {
 }
 .message-menu-template {
     position: relative;
+    display: none;
 }
 .message-menu {
     display: flex;
     flex-direction: column;
     background-color: var(--white-boolzapp);
     color: var(--secondary);
-    width: 20%;
-    display: none;
+    width: 50%;
+    /* display: none; */
     position: relative;
-    top: -10px;
-    left: 50%;
+    top: 50%;
+    left: -50%;
 }
 
 .message-menu li:not(:last-child) {
