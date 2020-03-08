@@ -291,6 +291,7 @@ img {
     border-radius: 10px;
     width: 40%;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .chat-session .message-out {
@@ -303,6 +304,7 @@ img {
     border-radius: 10px;
     width: 40%;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .time-chat {
@@ -325,6 +327,46 @@ img {
     display: flex;
 }
 
-.selected {
+.selected,
+.message-menu li:hover {
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+.chat-session .message-in.menu::after,
+.chat-session .message-out.menu::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f078";
+    color: var(--secondary);
+    align-self: flex-end;
+    margin: 3px;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+.chat-session .message-out.menu::after {
+    align-self: flex-start;
+}
+.message-menu-template {
+    position: relative;
+}
+.message-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white-boolzapp);
+    color: var(--secondary);
+    width: 20%;
+    display: none;
+    position: relative;
+    top: -10px;
+    left: 50%;
+}
+
+.message-menu li:not(:last-child) {
+    border-bottom: 1px solid var(--secondary);
+}
+
+.message-menu li {
+    padding: 5px;
+    list-style: none;
 }

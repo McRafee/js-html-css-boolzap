@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    // *** LOGIC ENGINE *** //
     // send message via right button
     $('#send-message').click(function(){
         sendMessage();
@@ -29,17 +30,6 @@ $(document).ready(function() {
 
             }
         });
-
-        // $('.chat-item .chat-item-text p').each(function(){ // If the typed character is present in the contact list, display it
-        //     if ($(this).text().toLowerCase().includes(searchFilter)) { // If the name of the list item has the characters typed inside, display it
-        //         $(this).parent().parent().show();
-        //     } else { // Otherwise, don't display it
-        //         $(this).parent().parent().hide();
-        //
-        //     }
-        // });
-
-
     });
 
     // chat view at user click
@@ -48,7 +38,7 @@ $(document).ready(function() {
         var userName = $(this).children().find("h5").text();
         var avatar = $(this).children().find("img").attr("src");
         // console.log(userName); //debug
-        console.log(userBox); //debug
+        // console.log(userBox); //debug
         var userId = $(this).data('userId');
         // console.log(userId); //debug
         $('.chat-session').each(function(){
@@ -63,14 +53,34 @@ $(document).ready(function() {
         })
      });
 
-     $(document).on('click', 'ul li' ,function() {
-     alert('li CLICK e ON');
-})
+    // message menu
+    $(".chat-session .message-in").mouseenter(function() {
+        $(this).addClass('menu');
+        $(document).on('click', $(this) ,function() {
+        $(".message-menu").show();
+        });
+    });
+
+    $(".chat-session .message-out").mouseenter(function() {
+        $(this).addClass('menu');
+        var message = $(this);
+        $(document).on('click', $(this) ,function() {
+            $(".message-menu").show();
+            $(".message-menu li:last-child").click(function(){
+            $(message).remove();
+            })
+        });
+    });
+
+    $(".chat-session .message-in, .chat-session .message-out").mouseleave(function(){
+        $(this).removeClass('menu');
+    });
 
 
 
 
 
+    // *** FUNCTIONS *** //
     function scroll(elementToScroll) {
               var pixelScroll = $(elementToScroll).height();
               $(elementToScroll).scrollTop(pixelScroll);
@@ -109,14 +119,5 @@ $(document).ready(function() {
         var time = hours + ":" + minutes;
         return time;
     }
-
-    // function timeUTC() {
-    //     var date = new Date();
-    //     var variation = (date.getTimezoneOffset() / 60) * (-1);
-    //     var hours = date.getUTCHours() + (variation);
-    //     var minutes = date.getUTCMinutes();
-    //     var time = hours + ":" + minutes + " " + date.getTimezoneOffset();
-    //     return time;
-    // }
 
 });
