@@ -292,6 +292,7 @@ img {
     width: 40%;
     font-size: 16px;
     cursor: pointer;
+    position: relative;
 }
 
 .chat-session .message-out {
@@ -305,6 +306,7 @@ img {
     width: 40%;
     font-size: 16px;
     cursor: pointer;
+    position: relative;
 }
 
 .time-chat {
@@ -347,27 +349,30 @@ img {
 .chat-session .message-out.menu::after {
     align-self: flex-start;
 }
-.message-menu-template {
-    position: relative;
-    display: none;
-}
+
 .message-menu {
     display: flex;
     flex-direction: column;
     background-color: var(--white-boolzapp);
     color: var(--secondary);
     width: 50%;
-    /* display: none; */
-    position: relative;
-    top: 50%;
-    left: -50%;
+    display: none;
+    position: absolute;
+    bottom: -65px;
+    right: 0;
 }
+
+.mm-right {
+    left: 0;
+}
+
 
 .message-menu li:not(:last-child) {
     border-bottom: 1px solid var(--secondary);
 }
 
 .message-menu li {
-    padding: 5px;
+    padding: 5px 0;
+    margin: 0 5px;
     list-style: none;
 }

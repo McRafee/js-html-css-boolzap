@@ -1,12 +1,10 @@
 $(document).ready(function() {
     // *** LOGIC ENGINE *** //
-    // send message via right button
-    $('#send-message').click(function(){
+    $('#send-message').click(function(){ // send message via right button
         sendMessage();
     });
 
-    // send message via enter button (keyboard)
-    $('#chat-input').keypress(function(event) {
+    $('#chat-input').keypress(function(event) { // send message via enter button (keyboard)
          if (event.code == "Enter") {
             sendMessage();
          }
@@ -20,7 +18,7 @@ $(document).ready(function() {
     });
 
     // filter friends in chat list
-    $('#search').keyup(function(){
+    $('#search').keyup(function(event){
         var searchFilter = $(this).val().toLowerCase();
         $('.chat-item .chat-item-text h5').each(function(){ // If the typed character is present in the contact list, display it
             if ($(this).text().toLowerCase().includes(searchFilter)) { // If the name of the list item has the characters typed inside, display it
@@ -37,10 +35,7 @@ $(document).ready(function() {
         var userBox = $(this);
         var userName = $(this).children().find("h5").text();
         var avatar = $(this).children().find("img").attr("src");
-        // console.log(userName); //debug
-        // console.log(userBox); //debug
         var userId = $(this).data('userId');
-        // console.log(userId); //debug
         $('.chat-session').each(function(){
             if(userId == $(this).data('userId')) {
                 $(".chat-item").removeClass("selected");
@@ -54,35 +49,28 @@ $(document).ready(function() {
      });
 
     // message menu
-    // $(".chat-session .message-in").mouseenter(function() {
-    //     $(this).addClass('menu');
-    //     $(document).on('click', $(this),function() {
-    //         $(".message-menu").show();
-    //     });
-    // });
-
-    $(".chat-session .message-out").mouseenter(function() {
-        $(this).addClass('menu');
+    $(".chat-session .message-in, .chat-session .message-out").mouseenter(function() {
         var message = $(this);
-        $(document).on('click', $(message) ,function() {
-            // $(".message-menu").show();
-            var messageSelected = $(message).addClass("selected");
-            var menu = $('.message-menu-template .message-menu').clone();
-            $(messageSelected).append(menu);
-            $(messageSelected).find("message-menu").addClass("active");
-            $(".message-menu li:last-child").click(function(){ //delete function
-            $(message).remove();
+        $(this).toggleClass('menu');
+        $(message).click(function(){
+            $(message).children(".message-menu").toggle(); // show and hide message menu
+            $(".message-menu li:last-child").click(function(){
+                $(message).remove(); //delete message function
             })
         });
 
-        $(".chat-session .message-out").mouseleave(function(){
-                $(this).removeClass('menu');
+        $(".chat-session .message-in, .chat-session .message-out").mouseleave(function(){
+            $(this).toggleClass('menu');
         });
 
     });
 
+    //********//
+    // $(document).on('click', $(message) ,function() {
+    // })
 
-
+    $(document).on('click', function() {
+    })
 
 
 
