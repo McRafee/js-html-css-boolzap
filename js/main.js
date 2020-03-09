@@ -49,28 +49,24 @@ $(document).ready(function() {
      });
 
     // message menu
-    $(".chat-session .message-in, .chat-session .message-out").mouseenter(function() {
-        var message = $(this);
-        $(this).toggleClass('menu');
-        $(message).click(function(){
-            $(message).children(".message-menu").toggle(); // show and hide message menu
-            $(".message-menu li:last-child").click(function(){
-                $(message).remove(); //delete message function
-            })
-        });
-
-        $(".chat-session .message-in, .chat-session .message-out").mouseleave(function(){
-            $(this).toggleClass('menu');
-        });
-
+    $(".chat-session .message-in, .chat-session .message-out").click(function(){
+        $(message).children(".message-menu").toggle(); // show and hide message menu
+        $(".message-menu li:last-child").click(function(){
+            $(message).remove(); //delete message function
+        })
     });
 
-    //********//
-    // $(document).on('click', $(message) ,function() {
-    // })
+    //control on jQuery generated elements//
+    $(document).on("click", ".chat-session .message-in, .chat-session .message-out",  function(){
+        var message = $(this);
+        $(message).children(".message-menu").toggle();
+        $(".message-menu li:last-child").click(function(){
+            $(message).remove(); //delete message function
+        })
+    });
 
-    $(document).on('click', function() {
-    })
+
+
 
 
 
@@ -88,6 +84,8 @@ $(document).ready(function() {
         message.children('.message-in .time-chat').text(timeLocal());
         $('.chat-session.active').append(message); // Added the message to the bottom of the list
         scroll(".chat");
+
+
     }
 
     function sendMessage() {

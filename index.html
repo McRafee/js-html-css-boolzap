@@ -45,7 +45,7 @@
                     <div class="search">
                         <div class="search-input">
                             <i class="fas fa-search"></i>
-                            <input id="search" type="text" name="" value="" placeholder="Cerca o inizia una nuova chat">
+                            <input id="search" placeholder="Cerca o inizia una nuova chat">
                         </div>
                     </div>
                 </div>
@@ -130,7 +130,7 @@
                         </div>
                         <div class="avatar-text">
                             <h5>Samantha</h5>
-                            <p>Ultimo accesso alle 17:00</p>
+                            <p>Ultimo accesso alle <span id:"last-access">17:00</span></p>
                         </div>
                     </div>
                     <div class="nav-head-right">
@@ -145,6 +145,9 @@
                             <p>01 - Voulez-vous coucher avec moi, ce soir?</p>
                             <div class="time-chat">
                                 <p>17:00</p>
+                            </div>
+                            <div class="menu-icon">
+                                <i class="fas fa-chevron-down"></i>
                             </div>
                             <div class="message-menu">
                                 <ul>
@@ -161,6 +164,9 @@
                             <p>Mi dispiace ma devo sistemare delle repo, sarà per la prossima volta.</p>
                             <div class="time-chat">
                                 <p>17:00</p>
+                            </div>
+                            <div class="menu-icon">
+                                <i class="fas fa-chevron-down"></i>
                             </div>
                             <div class="message-menu mm-right">
                                 <ul>
@@ -272,10 +278,13 @@
                     </div>
                     <!-- TEMPLATE -->
                     <div class="chat-session-template">
-                        <div class="message-in">
+                        <div class="message-in menu">
                             <p></p>
                             <div class="time-chat">
                                 <p></p>
+                            </div>
+                            <div class="menu-icon">
+                                <i class="fas fa-chevron-down"></i>
                             </div>
                             <div class="message-menu">
                                 <ul>
@@ -288,10 +297,13 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="message-out">
+                        <div class="message-out menu">
                             <p></p>
                             <div class="time-chat">
                                 <p></p>
+                            </div>
+                            <div class="menu-icon">
+                                <i class="fas fa-chevron-down"></i>
                             </div>
                             <div class="message-menu mm-right">
                                 <ul>

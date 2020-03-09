@@ -334,11 +334,14 @@ img {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.chat-session .message-in.menu::after,
-.chat-session .message-out.menu::after {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f078";
+.menu-icon {
+    display: none;
+
+}
+
+.chat-session .message-in:hover .menu-icon,
+.chat-session .message-out:hover .menu-icon {
+    display: flex;
     color: var(--secondary);
     align-self: flex-end;
     margin: 3px;
@@ -346,7 +349,7 @@ img {
     cursor: pointer;
 }
 
-.chat-session .message-out.menu::after {
+.chat-session .message-out:hover .menu-icon {
     align-self: flex-start;
 }
 
