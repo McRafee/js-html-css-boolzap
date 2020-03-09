@@ -358,6 +358,7 @@ img {
     display: flex;
     flex-direction: column;
     background-color: var(--white-boolzapp);
+    box-shadow: 0 1px 1px 0 rgba(var(--shadow-rgb),.06),0 2px 5px 0 rgba(var(--shadow-rgb),.2);
     color: var(--secondary);
     width: 50%;
     display: none;
