@@ -147,7 +147,7 @@ img {
 }
 
 .notifications p {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .notifications {
@@ -158,6 +158,9 @@ img {
     align-items: center;
 }
 
+#notification {
+    text-decoration: underline;
+}
 .bell-icon {
     width: 48px;
     height: 48px;
