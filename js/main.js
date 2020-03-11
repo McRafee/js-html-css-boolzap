@@ -25,7 +25,6 @@ $(document).ready(function() {
                 $(this).parentsUntil(".chat-list").show();
             } else { // Otherwise, don't display it
                 $(this).parentsUntil(".chat-list").hide();
-
             }
         });
     });
@@ -81,8 +80,6 @@ $(document).ready(function() {
         message.children('.message-in .time-chat').text(timeLocal());
         $('.chat-session.active').append(message); // Added the message to the bottom of the list
         scroll(".chat");
-
-
     }
 
     function sendMessage() {
@@ -94,7 +91,6 @@ $(document).ready(function() {
             message.children('.message-out .time-chat').text(timeLocal());
             $('.chat-session.active').append(message); // Added the message to the bottom of the list
             scroll(".chat");
-
             var randomMessage = randomSentences[numRandomMinMax(0,49)];
             setTimeout(function(){ autoResponder(randomMessage); }, 1000);
         }
